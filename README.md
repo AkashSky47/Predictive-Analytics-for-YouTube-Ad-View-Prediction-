@@ -3,6 +3,7 @@
 ## Project Description
 This project involves predicting YouTube ad views using machine learning models. It utilizes data such as video statistics and engagement metrics to build various predictive models and selects the best performing model for making predictions.
 
+
 ## Requirements
 
 To run this project, you need to have the following Python libraries installed:
@@ -15,7 +16,7 @@ To run this project, you need to have the following Python libraries installed:
 - `tensorflow`
 - `joblib`
 - `re` (part of the Python standard library)
-- 
+
 ## Datasets
 
 The project uses the following datasets:
@@ -25,6 +26,7 @@ The project uses the following datasets:
 ## Files
 
 - `YouTube_adview_Prediction_AkashShukla_IS_submission.py`: The main script for data processing, model training, and prediction.
+- `best_model.pkl`: The saved best-performing machine learning model.
 - `PredictedAdview.csv`: Output file containing predictions for the test dataset.
 
 ## Project Structure
@@ -53,7 +55,8 @@ The project uses the following datasets:
    Calculation of Root Mean Squared Error (RMSE) for each model to assess performance.
 
 7. **Saving and Loading Models**  
-   The best-performing model is saved and later used to make predictions on the test data.
+   - **`best_model.pkl`**: This file contains the serialized best-performing model, which was selected based on evaluation metrics. It is saved using `joblib` for later use without needing to retrain.
+   - The model is loaded from this file to make predictions on the test dataset.
 
 8. **Prediction Saving**  
    Predictions for the test dataset are saved to `PredictedAdview.csv`.
@@ -67,4 +70,3 @@ The project uses the following datasets:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
